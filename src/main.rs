@@ -1,4 +1,5 @@
 mod app;
+mod header; // Include the header module
 
 use app::App;
 

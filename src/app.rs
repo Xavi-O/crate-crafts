@@ -1,4 +1,5 @@
 use yew::prelude::*;
+use crate::header::Header; // Import the Header component
 
 struct Product {
     name: String,
@@ -22,7 +23,7 @@ pub fn app() -> Html {
 
     html! {
         <main>
-            <h1>{ "Crate Crafts" }</h1>
+        <Header /> // Use the Header component
             <div class="grid">
                 { for products.iter().map(|product| html! { 
                     <div class="grid-item">
