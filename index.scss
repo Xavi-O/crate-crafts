@@ -5,11 +5,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
-  width: 100vw; // Set the width to 100% of the viewport width
+  width: 80vw; // Set the width to 100% of the viewport width
+  margin: auto;
 }
 
 .grid-item {
-  border: 0.5px gray solid;
+  border: 1px white solid;
   position: relative;
   width: 92%;
   padding-top: 55%; // This makes the item a square
@@ -17,7 +18,7 @@ body {
   overflow: hidden; // This ensures the image doesn't overflow the border radius
   text-align: center;
 
-  img {
+  .product-image img {
       position: absolute;
       top: 0;
       left: 0;
@@ -26,16 +27,25 @@ body {
       object-fit: scale-down // This will ensure the image covers the entire item
   }
 
-  .product-name {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
-      color: white;
-      text-align: center;
+  .product-details {
+      margin: 10px 0 0 0;
+    .product-name {
+      margin: 0;
+      font-family: "Pompiere";
+      font-size: 20px;
+    }
+    .product-price {
+        margin: 0;
+        font-family: "Kodchasan";
+    }
   }
+
+  
+}
+.grid-item:hover {
+  cursor: pointer;
+  border-color: #601EF9;
+  color: #601EF9;
 }
 .brand {
   text-align: center;
